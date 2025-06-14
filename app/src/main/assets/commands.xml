@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keymapping>
+  <application package="dev.emassey0135.monarchBrlapiServer">
+    <context viewIdResourceName="dev.emassey0135.monarchBrlapiServer:id/mainView">
+      <action name="substitute">
+        <command commandId="Dots1" param="257">
+          <key>Dots1</key>
+        </command>
+        <command commandId="Dots2" param="258">
+          <key>Dots2</key>
+        </command>
+        <command commandId="Dots12" param="259">
+          <key>Dots12</key>
+        </command>
+        <command commandId="Dots3" param="260">
+          <key>Dots3</key>
+        </command>
+        <command commandId="Dots13" param="261">
+          <key>Dots13</key>
+        </command>
+        <command commandId="Dots23" param="262">
+          <key>Dots23</key>
+        </command>
+        <command commandId="Dots123" param="263">
+          <key>Dots123</key>
+        </command>
+        <command commandId="Dots4" param="264">
+          <key>Dots4</key>
+        </command>
+        <command commandId="Dots14" param="265">
+          <key>Dots14</key>
+        </command>
+        <command commandId="Dots24" param="266">
+          <key>Dots24</key>
+        </command>
+        <command commandId="Dots124" param="267">
+          <key>Dots124</key>
+        </command>
+        <command commandId="Dots34" param="268">
+          <key>Dots34</key>
+        </command>
+        <command commandId="Dots134" param="269">
+          <key>Dots134</key>
+        </command>
+        <command commandId="Dots234" param="270">
+          <key>Dots234</key>
+        </command>
+        <command commandId="Dots1234" param="271">
+          <key>Dots1234</key>
+        </command>
+        <command commandId="Dots5" param="272">
+          <key>Dots5</key>
+        </command>
+        <command commandId="Dots15" param="273">
+          <key>Dots15</key>
+        </command>
+        <command commandId="Dots25" param="274">
+          <key>Dots25</key>
+        </command>
+        <command commandId="Dots125" param="275">
+          <key>Dots125</key>
+        </command>
+        <command commandId="Dots35" param="276">
+          <key>Dots35</key>
+        </command>
+        <command commandId="Dots135" param="277">
+          <key>Dots135</key>
+        </command>
+        <command commandId="Dots235" param="278">
+          <key>Dots235</key>
+        </command>
+        <command commandId="Dots1235" param="279">
+          <key>Dots1235</key>
+        </command>
+        <command commandId="Dots45" param="280">
+          <key>Dots45</key>
+        </command>
+        <command commandId="Dots145" param="281">
+          <key>Dots145</key>
+        </command>
+        <command commandId="Dots245" param="282">
+          <key>Dots245</key>
+        </command>
+        <command commandId="Dots1245" param="283">
+          <key>Dots1245</key>
+        </command>
+        <command commandId="Dots345" param="284">
+          <key>Dots345</key>
+        </command>
+        <command commandId="Dots1345" param="285">
+          <key>Dots1345</key>
+        </command>
+        <command commandId="Dots2345" param="286">
+          <key>Dots2345</key>
+        </command>
+        <command commandId="Dots12345" param="287">
+          <key>Dots12345</key>
+        </command>
+        <command commandId="Dots6" param="288">
+          <key>Dots6</key>
+        </command>
+        <command commandId="Dots16" param="289">
+          <key>Dots16</key>
+        </command>
+        <command commandId="Dots26" param="290">
+          <key>Dots26</key>
+        </command>
+        <command commandId="Dots126" param="291">
+          <key>Dots126</key>
+        </command>
+        <command commandId="Dots36" param="292">
+          <key>Dots36</key>
+        </command>
+        <command commandId="Dots136" param="293">
+          <key>Dots136</key>
+        </command>
+        <command commandId="Dots236" param="294">
+          <key>Dots236</key>
+        </command>
+        <command commandId="Dots1236" param="295">
+          <key>Dots1236</key>
+        </command>
+        <command commandId="Dots46" param="296">
+          <key>Dots46</key>
+        </command>
+        <command commandId="Dots146" param="297">
+          <key>Dots146</key>
+        </command>
+        <command commandId="Dots246" param="298">
+          <key>Dots246</key>
+        </command>
+        <command commandId="Dots1246" param="299">
+          <key>Dots1246</key>
+        </command>
+        <command commandId="Dots346" param="300">
+          <key>Dots346</key>
+        </command>
+        <command commandId="Dots1346" param="301">
+          <key>Dots1346</key>
+        </command>
+        <command commandId="Dots2346" param="302">
+          <key>Dots2346</key>
+        </command>
+        <command commandId="Dots12346" param="303">
+          <key>Dots12346</key>
+        </command>
+        <command commandId="Dots56" param="304">
+          <key>Dots56</key>
+        </command>
+        <command commandId="Dots156" param="305">
+          <key>Dots156</key>
+        </command>
+        <command commandId="Dots256" param="306">
+          <key>Dots256</key>
+        </command>
+        <command commandId="Dots1256" param="307">
+          <key>Dots1256</key>
+        </command>
+        <command commandId="Dots356" param="308">
+          <key>Dots356</key>
+        </command>
+        <command commandId="Dots1356" param="309">
+          <key>Dots1356</key>
+        </command>
+        <command commandId="Dots2356" param="310">
+          <key>Dots2356</key>
+        </command>
+        <command commandId="Dots12356" param="311">
+          <key>Dots12356</key>
+        </command>
+        <command commandId="Dots456" param="312">
+          <key>Dots456</key>
+        </command>
+        <command commandId="Dots1456" param="313">
+          <key>Dots1456</key>
+        </command>
+        <command commandId="Dots2456" param="314">
+          <key>Dots2456</key>
+        </command>
+        <command commandId="Dots12456" param="315">
+          <key>Dots12456</key>
+        </command>
+        <command commandId="Dots3456" param="316">
+          <key>Dots3456</key>
+        </command>
+        <command commandId="Dots13456" param="317">
+          <key>Dots13456</key>
+        </command>
+        <command commandId="Dots23456" param="318">
+          <key>Dots23456</key>
+        </command>
+        <command commandId="Dots123456" param="319">
+          <key>Dots123456</key>
+        </command>
+        <command commandId="Dots7" param="320">
+          <key>Dots7</key>
+        </command>
+        <command commandId="Dots17" param="321">
+          <key>Dots17</key>
+        </command>
+        <command commandId="Dots27" param="322">
+          <key>Dots27</key>
+        </command>
+        <command commandId="Dots127" param="323">
+          <key>Dots127</key>
+        </command>
+        <command commandId="Dots37" param="324">
+          <key>Dots37</key>
+        </command>
+        <command commandId="Dots137" param="325">
+          <key>Dots137</key>
+        </command>
+        <command commandId="Dots237" param="326">
+          <key>Dots237</key>
+        </command>
+        <command commandId="Dots1237" param="327">
+          <key>Dots1237</key>
+        </command>
+        <command commandId="Dots47" param="328">
+          <key>Dots47</key>
+        </command>
+        <command commandId="Dots147" param="329">
+          <key>Dots147</key>
+        </command>
+        <command commandId="Dots247" param="330">
+          <key>Dots247</key>
+        </command>
+        <command commandId="Dots1247" param="331">
+          <key>Dots1247</key>
+        </command>
+        <command commandId="Dots347" param="332">
+          <key>Dots347</key>
+        </command>
+        <command commandId="Dots1347" param="333">
+          <key>Dots1347</key>
+        </command>
+        <command commandId="Dots2347" param="334">
+          <key>Dots2347</key>
+        </command>
+        <command commandId="Dots12347" param="335">
+          <key>Dots12347</key>
+        </command>
+        <command commandId="Dots57" param="336">
+          <key>Dots57</key>
+        </command>
+        <command commandId="Dots157" param="337">
+          <key>Dots157</key>
+        </command>
+        <command commandId="Dots257" param="338">
+          <key>Dots257</key>
+        </command>
+        <command commandId="Dots1257" param="339">
+          <key>Dots1257</key>
+        </command>
+        <command commandId="Dots357" param="340">
+          <key>Dots357</key>
+        </command>
+        <command commandId="Dots1357" param="341">
+          <key>Dots1357</key>
+        </command>
+        <command commandId="Dots2357" param="342">
+          <key>Dots2357</key>
+        </command>
+        <command commandId="Dots12357" param="343">
+          <key>Dots12357</key>
+        </command>
+        <command commandId="Dots457" param="344">
+          <key>Dots457</key>
+        </command>
+        <command commandId="Dots1457" param="345">
+          <key>Dots1457</key>
+        </command>
+        <command commandId="Dots2457" param="346">
+          <key>Dots2457</key>
+        </command>
+        <command commandId="Dots12457" param="347">
+          <key>Dots12457</key>
+        </command>
+        <command commandId="Dots3457" param="348">
+          <key>Dots3457</key>
+        </command>
+        <command commandId="Dots13457" param="349">
+          <key>Dots13457</key>
+        </command>
+        <command commandId="Dots23457" param="350">
+          <key>Dots23457</key>
+        </command>
+        <command commandId="Dots123457" param="351">
+          <key>Dots123457</key>
+        </command>
+        <command commandId="Dots67" param="352">
+          <key>Dots67</key>
+        </command>
+        <command commandId="Dots167" param="353">
+          <key>Dots167</key>
+        </command>
+        <command commandId="Dots267" param="354">
+          <key>Dots267</key>
+        </command>
+        <command commandId="Dots1267" param="355">
+          <key>Dots1267</key>
+        </command>
+        <command commandId="Dots367" param="356">
+          <key>Dots367</key>
+        </command>
+        <command commandId="Dots1367" param="357">
+          <key>Dots1367</key>
+        </command>
+        <command commandId="Dots2367" param="358">
+          <key>Dots2367</key>
+        </command>
+        <command commandId="Dots12367" param="359">
+          <key>Dots12367</key>
+        </command>
+        <command commandId="Dots467" param="360">
+          <key>Dots467</key>
+        </command>
+        <command commandId="Dots1467" param="361">
+          <key>Dots1467</key>
+        </command>
+        <command commandId="Dots2467" param="362">
+          <key>Dots2467</key>
+        </command>
+        <command commandId="Dots12467" param="363">
+          <key>Dots12467</key>
+        </command>
+        <command commandId="Dots3467" param="364">
+          <key>Dots3467</key>
+        </command>
+        <command commandId="Dots13467" param="365">
+          <key>Dots13467</key>
+        </command>
+        <command commandId="Dots23467" param="366">
+          <key>Dots23467</key>
+        </command>
+        <command commandId="Dots123467" param="367">
+          <key>Dots123467</key>
+        </command>
+        <command commandId="Dots567" param="368">
+          <key>Dots567</key>
+        </command>
+        <command commandId="Dots1567" param="369">
+          <key>Dots1567</key>
+        </command>
+        <command commandId="Dots2567" param="370">
+          <key>Dots2567</key>
+        </command>
+        <command commandId="Dots12567" param="371">
+          <key>Dots12567</key>
+        </command>
+        <command commandId="Dots3567" param="372">
+          <key>Dots3567</key>
+        </command>
+        <command commandId="Dots13567" param="373">
+          <key>Dots13567</key>
+        </command>
+        <command commandId="Dots23567" param="374">
+          <key>Dots23567</key>
+        </command>
+        <command commandId="Dots123567" param="375">
+          <key>Dots123567</key>
+        </command>
+        <command commandId="Dots4567" param="376">
+          <key>Dots4567</key>
+        </command>
+        <command commandId="Dots14567" param="377">
+          <key>Dots14567</key>
+        </command>
+        <command commandId="Dots24567" param="378">
+          <key>Dots24567</key>
+        </command>
+        <command commandId="Dots124567" param="379">
+          <key>Dots124567</key>
+        </command>
+        <command commandId="Dots34567" param="380">
+          <key>Dots34567</key>
+        </command>
+        <command commandId="Dots134567" param="381">
+          <key>Dots134567</key>
+        </command>
+        <command commandId="Dots234567" param="382">
+          <key>Dots234567</key>
+        </command>
+        <command commandId="Dots1234567" param="383">
+          <key>Dots1234567</key>
+        </command>
+        <command commandId="Dots8" param="384">
+          <key>Dots8</key>
+        </command>
+        <command commandId="Dots18" param="385">
+          <key>Dots18</key>
+        </command>
+        <command commandId="Dots28" param="386">
+          <key>Dots28</key>
+        </command>
+        <command commandId="Dots128" param="387">
+          <key>Dots128</key>
+        </command>
+        <command commandId="Dots38" param="388">
+          <key>Dots38</key>
+        </command>
+        <command commandId="Dots138" param="389">
+          <key>Dots138</key>
+        </command>
+        <command commandId="Dots238" param="390">
+          <key>Dots238</key>
+        </command>
+        <command commandId="Dots1238" param="391">
+          <key>Dots1238</key>
+        </command>
+        <command commandId="Dots48" param="392">
+          <key>Dots48</key>
+        </command>
+        <command commandId="Dots148" param="393">
+          <key>Dots148</key>
+        </command>
+        <command commandId="Dots248" param="394">
+          <key>Dots248</key>
+        </command>
+        <command commandId="Dots1248" param="395">
+          <key>Dots1248</key>
+        </command>
+        <command commandId="Dots348" param="396">
+          <key>Dots348</key>
+        </command>
+        <command commandId="Dots1348" param="397">
+          <key>Dots1348</key>
+        </command>
+        <command commandId="Dots2348" param="398">
+          <key>Dots2348</key>
+        </command>
+        <command commandId="Dots12348" param="399">
+          <key>Dots12348</key>
+        </command>
+        <command commandId="Dots58" param="400">
+          <key>Dots58</key>
+        </command>
+        <command commandId="Dots158" param="401">
+          <key>Dots158</key>
+        </command>
+        <command commandId="Dots258" param="402">
+          <key>Dots258</key>
+        </command>
+        <command commandId="Dots1258" param="403">
+          <key>Dots1258</key>
+        </command>
+        <command commandId="Dots358" param="404">
+          <key>Dots358</key>
+        </command>
+        <command commandId="Dots1358" param="405">
+          <key>Dots1358</key>
+        </command>
+        <command commandId="Dots2358" param="406">
+          <key>Dots2358</key>
+        </command>
+        <command commandId="Dots12358" param="407">
+          <key>Dots12358</key>
+        </command>
+        <command commandId="Dots458" param="408">
+          <key>Dots458</key>
+        </command>
+        <command commandId="Dots1458" param="409">
+          <key>Dots1458</key>
+        </command>
+        <command commandId="Dots2458" param="410">
+          <key>Dots2458</key>
+        </command>
+        <command commandId="Dots12458" param="411">
+          <key>Dots12458</key>
+        </command>
+        <command commandId="Dots3458" param="412">
+          <key>Dots3458</key>
+        </command>
+        <command commandId="Dots13458" param="413">
+          <key>Dots13458</key>
+        </command>
+        <command commandId="Dots23458" param="414">
+          <key>Dots23458</key>
+        </command>
+        <command commandId="Dots123458" param="415">
+          <key>Dots123458</key>
+        </command>
+        <command commandId="Dots68" param="416">
+          <key>Dots68</key>
+        </command>
+        <command commandId="Dots168" param="417">
+          <key>Dots168</key>
+        </command>
+        <command commandId="Dots268" param="418">
+          <key>Dots268</key>
+        </command>
+        <command commandId="Dots1268" param="419">
+          <key>Dots1268</key>
+        </command>
+        <command commandId="Dots368" param="420">
+          <key>Dots368</key>
+        </command>
+        <command commandId="Dots1368" param="421">
+          <key>Dots1368</key>
+        </command>
+        <command commandId="Dots2368" param="422">
+          <key>Dots2368</key>
+        </command>
+        <command commandId="Dots12368" param="423">
+          <key>Dots12368</key>
+        </command>
+        <command commandId="Dots468" param="424">
+          <key>Dots468</key>
+        </command>
+        <command commandId="Dots1468" param="425">
+          <key>Dots1468</key>
+        </command>
+        <command commandId="Dots2468" param="426">
+          <key>Dots2468</key>
+        </command>
+        <command commandId="Dots12468" param="427">
+          <key>Dots12468</key>
+        </command>
+        <command commandId="Dots3468" param="428">
+          <key>Dots3468</key>
+        </command>
+        <command commandId="Dots13468" param="429">
+          <key>Dots13468</key>
+        </command>
+        <command commandId="Dots23468" param="430">
+          <key>Dots23468</key>
+        </command>
+        <command commandId="Dots123468" param="431">
+          <key>Dots123468</key>
+        </command>
+        <command commandId="Dots568" param="432">
+          <key>Dots568</key>
+        </command>
+        <command commandId="Dots1568" param="433">
+          <key>Dots1568</key>
+        </command>
+        <command commandId="Dots2568" param="434">
+          <key>Dots2568</key>
+        </command>
+        <command commandId="Dots12568" param="435">
+          <key>Dots12568</key>
+        </command>
+        <command commandId="Dots3568" param="436">
+          <key>Dots3568</key>
+        </command>
+        <command commandId="Dots13568" param="437">
+          <key>Dots13568</key>
+        </command>
+        <command commandId="Dots23568" param="438">
+          <key>Dots23568</key>
+        </command>
+        <command commandId="Dots123568" param="439">
+          <key>Dots123568</key>
+        </command>
+        <command commandId="Dots4568" param="440">
+          <key>Dots4568</key>
+        </command>
+        <command commandId="Dots14568" param="441">
+          <key>Dots14568</key>
+        </command>
+        <command commandId="Dots24568" param="442">
+          <key>Dots24568</key>
+        </command>
+        <command commandId="Dots124568" param="443">
+          <key>Dots124568</key>
+        </command>
+        <command commandId="Dots34568" param="444">
+          <key>Dots34568</key>
+        </command>
+        <command commandId="Dots134568" param="445">
+          <key>Dots134568</key>
+        </command>
+        <command commandId="Dots234568" param="446">
+          <key>Dots234568</key>
+        </command>
+        <command commandId="Dots1234568" param="447">
+          <key>Dots1234568</key>
+        </command>
+        <command commandId="Dots78" param="448">
+          <key>Dots78</key>
+        </command>
+        <command commandId="Dots178" param="449">
+          <key>Dots178</key>
+        </command>
+        <command commandId="Dots278" param="450">
+          <key>Dots278</key>
+        </command>
+        <command commandId="Dots1278" param="451">
+          <key>Dots1278</key>
+        </command>
+        <command commandId="Dots378" param="452">
+          <key>Dots378</key>
+        </command>
+        <command commandId="Dots1378" param="453">
+          <key>Dots1378</key>
+        </command>
+        <command commandId="Dots2378" param="454">
+          <key>Dots2378</key>
+        </command>
+        <command commandId="Dots12378" param="455">
+          <key>Dots12378</key>
+        </command>
+        <command commandId="Dots478" param="456">
+          <key>Dots478</key>
+        </command>
+        <command commandId="Dots1478" param="457">
+          <key>Dots1478</key>
+        </command>
+        <command commandId="Dots2478" param="458">
+          <key>Dots2478</key>
+        </command>
+        <command commandId="Dots12478" param="459">
+          <key>Dots12478</key>
+        </command>
+        <command commandId="Dots3478" param="460">
+          <key>Dots3478</key>
+        </command>
+        <command commandId="Dots13478" param="461">
+          <key>Dots13478</key>
+        </command>
+        <command commandId="Dots23478" param="462">
+          <key>Dots23478</key>
+        </command>
+        <command commandId="Dots123478" param="463">
+          <key>Dots123478</key>
+        </command>
+        <command commandId="Dots578" param="464">
+          <key>Dots578</key>
+        </command>
+        <command commandId="Dots1578" param="465">
+          <key>Dots1578</key>
+        </command>
+        <command commandId="Dots2578" param="466">
+          <key>Dots2578</key>
+        </command>
+        <command commandId="Dots12578" param="467">
+          <key>Dots12578</key>
+        </command>
+        <command commandId="Dots3578" param="468">
+          <key>Dots3578</key>
+        </command>
+        <command commandId="Dots13578" param="469">
+          <key>Dots13578</key>
+        </command>
+        <command commandId="Dots23578" param="470">
+          <key>Dots23578</key>
+        </command>
+        <command commandId="Dots123578" param="471">
+          <key>Dots123578</key>
+        </command>
+        <command commandId="Dots4578" param="472">
+          <key>Dots4578</key>
+        </command>
+        <command commandId="Dots14578" param="473">
+          <key>Dots14578</key>
+        </command>
+        <command commandId="Dots24578" param="474">
+          <key>Dots24578</key>
+        </command>
+        <command commandId="Dots124578" param="475">
+          <key>Dots124578</key>
+        </command>
+        <command commandId="Dots34578" param="476">
+          <key>Dots34578</key>
+        </command>
+        <command commandId="Dots134578" param="477">
+          <key>Dots134578</key>
+        </command>
+        <command commandId="Dots234578" param="478">
+          <key>Dots234578</key>
+        </command>
+        <command commandId="Dots1234578" param="479">
+          <key>Dots1234578</key>
+        </command>
+        <command commandId="Dots678" param="480">
+          <key>Dots678</key>
+        </command>
+        <command commandId="Dots1678" param="481">
+          <key>Dots1678</key>
+        </command>
+        <command commandId="Dots2678" param="482">
+          <key>Dots2678</key>
+        </command>
+        <command commandId="Dots12678" param="483">
+          <key>Dots12678</key>
+        </command>
+        <command commandId="Dots3678" param="484">
+          <key>Dots3678</key>
+        </command>
+        <command commandId="Dots13678" param="485">
+          <key>Dots13678</key>
+        </command>
+        <command commandId="Dots23678" param="486">
+          <key>Dots23678</key>
+        </command>
+        <command commandId="Dots123678" param="487">
+          <key>Dots123678</key>
+        </command>
+        <command commandId="Dots4678" param="488">
+          <key>Dots4678</key>
+        </command>
+        <command commandId="Dots14678" param="489">
+          <key>Dots14678</key>
+        </command>
+        <command commandId="Dots24678" param="490">
+          <key>Dots24678</key>
+        </command>
+        <command commandId="Dots124678" param="491">
+          <key>Dots124678</key>
+        </command>
+        <command commandId="Dots34678" param="492">
+          <key>Dots34678</key>
+        </command>
+        <command commandId="Dots134678" param="493">
+          <key>Dots134678</key>
+        </command>
+        <command commandId="Dots234678" param="494">
+          <key>Dots234678</key>
+        </command>
+        <command commandId="Dots1234678" param="495">
+          <key>Dots1234678</key>
+        </command>
+        <command commandId="Dots5678" param="496">
+          <key>Dots5678</key>
+        </command>
+        <command commandId="Dots15678" param="497">
+          <key>Dots15678</key>
+        </command>
+        <command commandId="Dots25678" param="498">
+          <key>Dots25678</key>
+        </command>
+        <command commandId="Dots125678" param="499">
+          <key>Dots125678</key>
+        </command>
+        <command commandId="Dots35678" param="500">
+          <key>Dots35678</key>
+        </command>
+        <command commandId="Dots135678" param="501">
+          <key>Dots135678</key>
+        </command>
+        <command commandId="Dots235678" param="502">
+          <key>Dots235678</key>
+        </command>
+        <command commandId="Dots1235678" param="503">
+          <key>Dots1235678</key>
+        </command>
+        <command commandId="Dots45678" param="504">
+          <key>Dots45678</key>
+        </command>
+        <command commandId="Dots145678" param="505">
+          <key>Dots145678</key>
+        </command>
+        <command commandId="Dots245678" param="506">
+          <key>Dots245678</key>
+        </command>
+        <command commandId="Dots1245678" param="507">
+          <key>Dots1245678</key>
+        </command>
+        <command commandId="Dots345678" param="508">
+          <key>Dots345678</key>
+        </command>
+        <command commandId="Dots1345678" param="509">
+          <key>Dots1345678</key>
+        </command>
+        <command commandId="Dots2345678" param="510">
+          <key>Dots2345678</key>
+        </command>
+        <command commandId="Dots12345678" param="511">
+          <key>Dots12345678</key>
+        </command>
+        <command commandId="Dots9" param="512">
+          <key>Dots9</key>
+        </command>
+        <command commandId="Dots19" param="513">
+          <key>Dots19</key>
+        </command>
+        <command commandId="Dots29" param="514">
+          <key>Dots29</key>
+        </command>
+        <command commandId="Dots129" param="515">
+          <key>Dots129</key>
+        </command>
+        <command commandId="Dots39" param="516">
+          <key>Dots39</key>
+        </command>
+        <command commandId="Dots139" param="517">
+          <key>Dots139</key>
+        </command>
+        <command commandId="Dots239" param="518">
+          <key>Dots239</key>
+        </command>
+        <command commandId="Dots1239" param="519">
+          <key>Dots1239</key>
+        </command>
+        <command commandId="Dots49" param="520">
+          <key>Dots49</key>
+        </command>
+        <command commandId="Dots149" param="521">
+          <key>Dots149</key>
+        </command>
+        <command commandId="Dots249" param="522">
+          <key>Dots249</key>
+        </command>
+        <command commandId="Dots1249" param="523">
+          <key>Dots1249</key>
+        </command>
+        <command commandId="Dots349" param="524">
+          <key>Dots349</key>
+        </command>
+        <command commandId="Dots1349" param="525">
+          <key>Dots1349</key>
+        </command>
+        <command commandId="Dots2349" param="526">
+          <key>Dots2349</key>
+        </command>
+        <command commandId="Dots12349" param="527">
+          <key>Dots12349</key>
+        </command>
+        <command commandId="Dots59" param="528">
+          <key>Dots59</key>
+        </command>
+        <command commandId="Dots159" param="529">
+          <key>Dots159</key>
+        </command>
+        <command commandId="Dots259" param="530">
+          <key>Dots259</key>
+        </command>
+        <command commandId="Dots1259" param="531">
+          <key>Dots1259</key>
+        </command>
+        <command commandId="Dots359" param="532">
+          <key>Dots359</key>
+        </command>
+        <command commandId="Dots1359" param="533">
+          <key>Dots1359</key>
+        </command>
+        <command commandId="Dots2359" param="534">
+          <key>Dots2359</key>
+        </command>
+        <command commandId="Dots12359" param="535">
+          <key>Dots12359</key>
+        </command>
+        <command commandId="Dots459" param="536">
+          <key>Dots459</key>
+        </command>
+        <command commandId="Dots1459" param="537">
+          <key>Dots1459</key>
+        </command>
+        <command commandId="Dots2459" param="538">
+          <key>Dots2459</key>
+        </command>
+        <command commandId="Dots12459" param="539">
+          <key>Dots12459</key>
+        </command>
+        <command commandId="Dots3459" param="540">
+          <key>Dots3459</key>
+        </command>
+        <command commandId="Dots13459" param="541">
+          <key>Dots13459</key>
+        </command>
+        <command commandId="Dots23459" param="542">
+          <key>Dots23459</key>
+        </command>
+        <command commandId="Dots123459" param="543">
+          <key>Dots123459</key>
+        </command>
+        <command commandId="Dots69" param="544">
+          <key>Dots69</key>
+        </command>
+        <command commandId="Dots169" param="545">
+          <key>Dots169</key>
+        </command>
+        <command commandId="Dots269" param="546">
+          <key>Dots269</key>
+        </command>
+        <command commandId="Dots1269" param="547">
+          <key>Dots1269</key>
+        </command>
+        <command commandId="Dots369" param="548">
+          <key>Dots369</key>
+        </command>
+        <command commandId="Dots1369" param="549">
+          <key>Dots1369</key>
+        </command>
+        <command commandId="Dots2369" param="550">
+          <key>Dots2369</key>
+        </command>
+        <command commandId="Dots12369" param="551">
+          <key>Dots12369</key>
+        </command>
+        <command commandId="Dots469" param="552">
+          <key>Dots469</key>
+        </command>
+        <command commandId="Dots1469" param="553">
+          <key>Dots1469</key>
+        </command>
+        <command commandId="Dots2469" param="554">
+          <key>Dots2469</key>
+        </command>
+        <command commandId="Dots12469" param="555">
+          <key>Dots12469</key>
+        </command>
+        <command commandId="Dots3469" param="556">
+          <key>Dots3469</key>
+        </command>
+        <command commandId="Dots13469" param="557">
+          <key>Dots13469</key>
+        </command>
+        <command commandId="Dots23469" param="558">
+          <key>Dots23469</key>
+        </command>
+        <command commandId="Dots123469" param="559">
+          <key>Dots123469</key>
+        </command>
+        <command commandId="Dots569" param="560">
+          <key>Dots569</key>
+        </command>
+        <command commandId="Dots1569" param="561">
+          <key>Dots1569</key>
+        </command>
+        <command commandId="Dots2569" param="562">
+          <key>Dots2569</key>
+        </command>
+        <command commandId="Dots12569" param="563">
+          <key>Dots12569</key>
+        </command>
+        <command commandId="Dots3569" param="564">
+          <key>Dots3569</key>
+        </command>
+        <command commandId="Dots13569" param="565">
+          <key>Dots13569</key>
+        </command>
+        <command commandId="Dots23569" param="566">
+          <key>Dots23569</key>
+        </command>
+        <command commandId="Dots123569" param="567">
+          <key>Dots123569</key>
+        </command>
+        <command commandId="Dots4569" param="568">
+          <key>Dots4569</key>
+        </command>
+        <command commandId="Dots14569" param="569">
+          <key>Dots14569</key>
+        </command>
+        <command commandId="Dots24569" param="570">
+          <key>Dots24569</key>
+        </command>
+        <command commandId="Dots124569" param="571">
+          <key>Dots124569</key>
+        </command>
+        <command commandId="Dots34569" param="572">
+          <key>Dots34569</key>
+        </command>
+        <command commandId="Dots134569" param="573">
+          <key>Dots134569</key>
+        </command>
+        <command commandId="Dots234569" param="574">
+          <key>Dots234569</key>
+        </command>
+        <command commandId="Dots1234569" param="575">
+          <key>Dots1234569</key>
+        </command>
+        <command commandId="Dots79" param="576">
+          <key>Dots79</key>
+        </command>
+        <command commandId="Dots179" param="577">
+          <key>Dots179</key>
+        </command>
+        <command commandId="Dots279" param="578">
+          <key>Dots279</key>
+        </command>
+        <command commandId="Dots1279" param="579">
+          <key>Dots1279</key>
+        </command>
+        <command commandId="Dots379" param="580">
+          <key>Dots379</key>
+        </command>
+        <command commandId="Dots1379" param="581">
+          <key>Dots1379</key>
+        </command>
+        <command commandId="Dots2379" param="582">
+          <key>Dots2379</key>
+        </command>
+        <command commandId="Dots12379" param="583">
+          <key>Dots12379</key>
+        </command>
+        <command commandId="Dots479" param="584">
+          <key>Dots479</key>
+        </command>
+        <command commandId="Dots1479" param="585">
+          <key>Dots1479</key>
+        </command>
+        <command commandId="Dots2479" param="586">
+          <key>Dots2479</key>
+        </command>
+        <command commandId="Dots12479" param="587">
+          <key>Dots12479</key>
+        </command>
+        <command commandId="Dots3479" param="588">
+          <key>Dots3479</key>
+        </command>
+        <command commandId="Dots13479" param="589">
+          <key>Dots13479</key>
+        </command>
+        <command commandId="Dots23479" param="590">
+          <key>Dots23479</key>
+        </command>
+        <command commandId="Dots123479" param="591">
+          <key>Dots123479</key>
+        </command>
+        <command commandId="Dots579" param="592">
+          <key>Dots579</key>
+        </command>
+        <command commandId="Dots1579" param="593">
+          <key>Dots1579</key>
+        </command>
+        <command commandId="Dots2579" param="594">
+          <key>Dots2579</key>
+        </command>
+        <command commandId="Dots12579" param="595">
+          <key>Dots12579</key>
+        </command>
+        <command commandId="Dots3579" param="596">
+          <key>Dots3579</key>
+        </command>
+        <command commandId="Dots13579" param="597">
+          <key>Dots13579</key>
+        </command>
+        <command commandId="Dots23579" param="598">
+          <key>Dots23579</key>
+        </command>
+        <command commandId="Dots123579" param="599">
+          <key>Dots123579</key>
+        </command>
+        <command commandId="Dots4579" param="600">
+          <key>Dots4579</key>
+        </command>
+        <command commandId="Dots14579" param="601">
+          <key>Dots14579</key>
+        </command>
+        <command commandId="Dots24579" param="602">
+          <key>Dots24579</key>
+        </command>
+        <command commandId="Dots124579" param="603">
+          <key>Dots124579</key>
+        </command>
+        <command commandId="Dots34579" param="604">
+          <key>Dots34579</key>
+        </command>
+        <command commandId="Dots134579" param="605">
+          <key>Dots134579</key>
+        </command>
+        <command commandId="Dots234579" param="606">
+          <key>Dots234579</key>
+        </command>
+        <command commandId="Dots1234579" param="607">
+          <key>Dots1234579</key>
+        </command>
+        <command commandId="Dots679" param="608">
+          <key>Dots679</key>
+        </command>
+        <command commandId="Dots1679" param="609">
+          <key>Dots1679</key>
+        </command>
+        <command commandId="Dots2679" param="610">
+          <key>Dots2679</key>
+        </command>
+        <command commandId="Dots12679" param="611">
+          <key>Dots12679</key>
+        </command>
+        <command commandId="Dots3679" param="612">
+          <key>Dots3679</key>
+        </command>
+        <command commandId="Dots13679" param="613">
+          <key>Dots13679</key>
+        </command>
+        <command commandId="Dots23679" param="614">
+          <key>Dots23679</key>
+        </command>
+        <command commandId="Dots123679" param="615">
+          <key>Dots123679</key>
+        </command>
+        <command commandId="Dots4679" param="616">
+          <key>Dots4679</key>
+        </command>
+        <command commandId="Dots14679" param="617">
+          <key>Dots14679</key>
+        </command>
+        <command commandId="Dots24679" param="618">
+          <key>Dots24679</key>
+        </command>
+        <command commandId="Dots124679" param="619">
+          <key>Dots124679</key>
+        </command>
+        <command commandId="Dots34679" param="620">
+          <key>Dots34679</key>
+        </command>
+        <command commandId="Dots134679" param="621">
+          <key>Dots134679</key>
+        </command>
+        <command commandId="Dots234679" param="622">
+          <key>Dots234679</key>
+        </command>
+        <command commandId="Dots1234679" param="623">
+          <key>Dots1234679</key>
+        </command>
+        <command commandId="Dots5679" param="624">
+          <key>Dots5679</key>
+        </command>
+        <command commandId="Dots15679" param="625">
+          <key>Dots15679</key>
+        </command>
+        <command commandId="Dots25679" param="626">
+          <key>Dots25679</key>
+        </command>
+        <command commandId="Dots125679" param="627">
+          <key>Dots125679</key>
+        </command>
+        <command commandId="Dots35679" param="628">
+          <key>Dots35679</key>
+        </command>
+        <command commandId="Dots135679" param="629">
+          <key>Dots135679</key>
+        </command>
+        <command commandId="Dots235679" param="630">
+          <key>Dots235679</key>
+        </command>
+        <command commandId="Dots1235679" param="631">
+          <key>Dots1235679</key>
+        </command>
+        <command commandId="Dots45679" param="632">
+          <key>Dots45679</key>
+        </command>
+        <command commandId="Dots145679" param="633">
+          <key>Dots145679</key>
+        </command>
+        <command commandId="Dots245679" param="634">
+          <key>Dots245679</key>
+        </command>
+        <command commandId="Dots1245679" param="635">
+          <key>Dots1245679</key>
+        </command>
+        <command commandId="Dots345679" param="636">
+          <key>Dots345679</key>
+        </command>
+        <command commandId="Dots1345679" param="637">
+          <key>Dots1345679</key>
+        </command>
+        <command commandId="Dots2345679" param="638">
+          <key>Dots2345679</key>
+        </command>
+        <command commandId="Dots12345679" param="639">
+          <key>Dots12345679</key>
+        </command>
+        <command commandId="Dots89" param="640">
+          <key>Dots89</key>
+        </command>
+        <command commandId="Dots189" param="641">
+          <key>Dots189</key>
+        </command>
+        <command commandId="Dots289" param="642">
+          <key>Dots289</key>
+        </command>
+        <command commandId="Dots1289" param="643">
+          <key>Dots1289</key>
+        </command>
+        <command commandId="Dots389" param="644">
+          <key>Dots389</key>
+        </command>
+        <command commandId="Dots1389" param="645">
+          <key>Dots1389</key>
+        </command>
+        <command commandId="Dots2389" param="646">
+          <key>Dots2389</key>
+        </command>
+        <command commandId="Dots12389" param="647">
+          <key>Dots12389</key>
+        </command>
+        <command commandId="Dots489" param="648">
+          <key>Dots489</key>
+        </command>
+        <command commandId="Dots1489" param="649">
+          <key>Dots1489</key>
+        </command>
+        <command commandId="Dots2489" param="650">
+          <key>Dots2489</key>
+        </command>
+        <command commandId="Dots12489" param="651">
+          <key>Dots12489</key>
+        </command>
+        <command commandId="Dots3489" param="652">
+          <key>Dots3489</key>
+        </command>
+        <command commandId="Dots13489" param="653">
+          <key>Dots13489</key>
+        </command>
+        <command commandId="Dots23489" param="654">
+          <key>Dots23489</key>
+        </command>
+        <command commandId="Dots123489" param="655">
+          <key>Dots123489</key>
+        </command>
+        <command commandId="Dots589" param="656">
+          <key>Dots589</key>
+        </command>
+        <command commandId="Dots1589" param="657">
+          <key>Dots1589</key>
+        </command>
+        <command commandId="Dots2589" param="658">
+          <key>Dots2589</key>
+        </command>
+        <command commandId="Dots12589" param="659">
+          <key>Dots12589</key>
+        </command>
+        <command commandId="Dots3589" param="660">
+          <key>Dots3589</key>
+        </command>
+        <command commandId="Dots13589" param="661">
+          <key>Dots13589</key>
+        </command>
+        <command commandId="Dots23589" param="662">
+          <key>Dots23589</key>
+        </command>
+        <command commandId="Dots123589" param="663">
+          <key>Dots123589</key>
+        </command>
+        <command commandId="Dots4589" param="664">
+          <key>Dots4589</key>
+        </command>
+        <command commandId="Dots14589" param="665">
+          <key>Dots14589</key>
+        </command>
+        <command commandId="Dots24589" param="666">
+          <key>Dots24589</key>
+        </command>
+        <command commandId="Dots124589" param="667">
+          <key>Dots124589</key>
+        </command>
+        <command commandId="Dots34589" param="668">
+          <key>Dots34589</key>
+        </command>
+        <command commandId="Dots134589" param="669">
+          <key>Dots134589</key>
+        </command>
+        <command commandId="Dots234589" param="670">
+          <key>Dots234589</key>
+        </command>
+        <command commandId="Dots1234589" param="671">
+          <key>Dots1234589</key>
+        </command>
+        <command commandId="Dots689" param="672">
+          <key>Dots689</key>
+        </command>
+        <command commandId="Dots1689" param="673">
+          <key>Dots1689</key>
+        </command>
+        <command commandId="Dots2689" param="674">
+          <key>Dots2689</key>
+        </command>
+        <command commandId="Dots12689" param="675">
+          <key>Dots12689</key>
+        </command>
+        <command commandId="Dots3689" param="676">
+          <key>Dots3689</key>
+        </command>
+        <command commandId="Dots13689" param="677">
+          <key>Dots13689</key>
+        </command>
+        <command commandId="Dots23689" param="678">
+          <key>Dots23689</key>
+        </command>
+        <command commandId="Dots123689" param="679">
+          <key>Dots123689</key>
+        </command>
+        <command commandId="Dots4689" param="680">
+          <key>Dots4689</key>
+        </command>
+        <command commandId="Dots14689" param="681">
+          <key>Dots14689</key>
+        </command>
+        <command commandId="Dots24689" param="682">
+          <key>Dots24689</key>
+        </command>
+        <command commandId="Dots124689" param="683">
+          <key>Dots124689</key>
+        </command>
+        <command commandId="Dots34689" param="684">
+          <key>Dots34689</key>
+        </command>
+        <command commandId="Dots134689" param="685">
+          <key>Dots134689</key>
+        </command>
+        <command commandId="Dots234689" param="686">
+          <key>Dots234689</key>
+        </command>
+        <command commandId="Dots1234689" param="687">
+          <key>Dots1234689</key>
+        </command>
+        <command commandId="Dots5689" param="688">
+          <key>Dots5689</key>
+        </command>
+        <command commandId="Dots15689" param="689">
+          <key>Dots15689</key>
+        </command>
+        <command commandId="Dots25689" param="690">
+          <key>Dots25689</key>
+        </command>
+        <command commandId="Dots125689" param="691">
+          <key>Dots125689</key>
+        </command>
+        <command commandId="Dots35689" param="692">
+          <key>Dots35689</key>
+        </command>
+        <command commandId="Dots135689" param="693">
+          <key>Dots135689</key>
+        </command>
+        <command commandId="Dots235689" param="694">
+          <key>Dots235689</key>
+        </command>
+        <command commandId="Dots1235689" param="695">
+          <key>Dots1235689</key>
+        </command>
+        <command commandId="Dots45689" param="696">
+          <key>Dots45689</key>
+        </command>
+        <command commandId="Dots145689" param="697">
+          <key>Dots145689</key>
+        </command>
+        <command commandId="Dots245689" param="698">
+          <key>Dots245689</key>
+        </command>
+        <command commandId="Dots1245689" param="699">
+          <key>Dots1245689</key>
+        </command>
+        <command commandId="Dots345689" param="700">
+          <key>Dots345689</key>
+        </command>
+        <command commandId="Dots1345689" param="701">
+          <key>Dots1345689</key>
+        </command>
+        <command commandId="Dots2345689" param="702">
+          <key>Dots2345689</key>
+        </command>
+        <command commandId="Dots12345689" param="703">
+          <key>Dots12345689</key>
+        </command>
+        <command commandId="Dots789" param="704">
+          <key>Dots789</key>
+        </command>
+        <command commandId="Dots1789" param="705">
+          <key>Dots1789</key>
+        </command>
+        <command commandId="Dots2789" param="706">
+          <key>Dots2789</key>
+        </command>
+        <command commandId="Dots12789" param="707">
+          <key>Dots12789</key>
+        </command>
+        <command commandId="Dots3789" param="708">
+          <key>Dots3789</key>
+        </command>
+        <command commandId="Dots13789" param="709">
+          <key>Dots13789</key>
+        </command>
+        <command commandId="Dots23789" param="710">
+          <key>Dots23789</key>
+        </command>
+        <command commandId="Dots123789" param="711">
+          <key>Dots123789</key>
+        </command>
+        <command commandId="Dots4789" param="712">
+          <key>Dots4789</key>
+        </command>
+        <command commandId="Dots14789" param="713">
+          <key>Dots14789</key>
+        </command>
+        <command commandId="Dots24789" param="714">
+          <key>Dots24789</key>
+        </command>
+        <command commandId="Dots124789" param="715">
+          <key>Dots124789</key>
+        </command>
+        <command commandId="Dots34789" param="716">
+          <key>Dots34789</key>
+        </command>
+        <command commandId="Dots134789" param="717">
+          <key>Dots134789</key>
+        </command>
+        <command commandId="Dots234789" param="718">
+          <key>Dots234789</key>
+        </command>
+        <command commandId="Dots1234789" param="719">
+          <key>Dots1234789</key>
+        </command>
+        <command commandId="Dots5789" param="720">
+          <key>Dots5789</key>
+        </command>
+        <command commandId="Dots15789" param="721">
+          <key>Dots15789</key>
+        </command>
+        <command commandId="Dots25789" param="722">
+          <key>Dots25789</key>
+        </command>
+        <command commandId="Dots125789" param="723">
+          <key>Dots125789</key>
+        </command>
+        <command commandId="Dots35789" param="724">
+          <key>Dots35789</key>
+        </command>
+        <command commandId="Dots135789" param="725">
+          <key>Dots135789</key>
+        </command>
+        <command commandId="Dots235789" param="726">
+          <key>Dots235789</key>
+        </command>
+        <command commandId="Dots1235789" param="727">
+          <key>Dots1235789</key>
+        </command>
+        <command commandId="Dots45789" param="728">
+          <key>Dots45789</key>
+        </command>
+        <command commandId="Dots145789" param="729">
+          <key>Dots145789</key>
+        </command>
+        <command commandId="Dots245789" param="730">
+          <key>Dots245789</key>
+        </command>
+        <command commandId="Dots1245789" param="731">
+          <key>Dots1245789</key>
+        </command>
+        <command commandId="Dots345789" param="732">
+          <key>Dots345789</key>
+        </command>
+        <command commandId="Dots1345789" param="733">
+          <key>Dots1345789</key>
+        </command>
+        <command commandId="Dots2345789" param="734">
+          <key>Dots2345789</key>
+        </command>
+        <command commandId="Dots12345789" param="735">
+          <key>Dots12345789</key>
+        </command>
+        <command commandId="Dots6789" param="736">
+          <key>Dots6789</key>
+        </command>
+        <command commandId="Dots16789" param="737">
+          <key>Dots16789</key>
+        </command>
+        <command commandId="Dots26789" param="738">
+          <key>Dots26789</key>
+        </command>
+        <command commandId="Dots126789" param="739">
+          <key>Dots126789</key>
+        </command>
+        <command commandId="Dots36789" param="740">
+          <key>Dots36789</key>
+        </command>
+        <command commandId="Dots136789" param="741">
+          <key>Dots136789</key>
+        </command>
+        <command commandId="Dots236789" param="742">
+          <key>Dots236789</key>
+        </command>
+        <command commandId="Dots1236789" param="743">
+          <key>Dots1236789</key>
+        </command>
+        <command commandId="Dots46789" param="744">
+          <key>Dots46789</key>
+        </command>
+        <command commandId="Dots146789" param="745">
+          <key>Dots146789</key>
+        </command>
+        <command commandId="Dots246789" param="746">
+          <key>Dots246789</key>
+        </command>
+        <command commandId="Dots1246789" param="747">
+          <key>Dots1246789</key>
+        </command>
+        <command commandId="Dots346789" param="748">
+          <key>Dots346789</key>
+        </command>
+        <command commandId="Dots1346789" param="749">
+          <key>Dots1346789</key>
+        </command>
+        <command commandId="Dots2346789" param="750">
+          <key>Dots2346789</key>
+        </command>
+        <command commandId="Dots12346789" param="751">
+          <key>Dots12346789</key>
+        </command>
+        <command commandId="Dots56789" param="752">
+          <key>Dots56789</key>
+        </command>
+        <command commandId="Dots156789" param="753">
+          <key>Dots156789</key>
+        </command>
+        <command commandId="Dots256789" param="754">
+          <key>Dots256789</key>
+        </command>
+        <command commandId="Dots1256789" param="755">
+          <key>Dots1256789</key>
+        </command>
+        <command commandId="Dots356789" param="756">
+          <key>Dots356789</key>
+        </command>
+        <command commandId="Dots1356789" param="757">
+          <key>Dots1356789</key>
+        </command>
+        <command commandId="Dots2356789" param="758">
+          <key>Dots2356789</key>
+        </command>
+        <command commandId="Dots12356789" param="759">
+          <key>Dots12356789</key>
+        </command>
+        <command commandId="Dots456789" param="760">
+          <key>Dots456789</key>
+        </command>
+        <command commandId="Dots1456789" param="761">
+          <key>Dots1456789</key>
+        </command>
+        <command commandId="Dots2456789" param="762">
+          <key>Dots2456789</key>
+        </command>
+        <command commandId="Dots12456789" param="763">
+          <key>Dots12456789</key>
+        </command>
+        <command commandId="Dots3456789" param="764">
+          <key>Dots3456789</key>
+        </command>
+        <command commandId="Dots13456789" param="765">
+          <key>Dots13456789</key>
+        </command>
+        <command commandId="Dots23456789" param="766">
+          <key>Dots23456789</key>
+        </command>
+        <command commandId="Dots123456789" param="767">
+          <key>Dots123456789</key>
+        </command>
+        <command commandId="PanningUp" param="768">
+          <key>PanningUp</key>
+        </command>
+        <command commandId="PanningDown" param="769">
+          <key>PanningDown</key>
+        </command>
+        <command commandId="ZoomIn" param="770">
+          <key>ZoomIn</key>
+        </command>
+        <command commandId="ZoomOut" param="771">
+          <key>ZoomOut</key>
+        </command>
+        <command commandId="RightDpad_Left" param="772">
+          <key>RightDpad_Left</key>
+        </command>
+        <command commandId="RightDpad_Right" param="773">
+          <key>RightDpad_Right</key>
+        </command>
+        <command commandId="RightDpad_Up" param="774">
+          <key>RightDpad_Up</key>
+        </command>
+        <command commandId="RightDpad_Down" param="775">
+          <key>RightDpad_Down</key>
+        </command>
+        <command commandId="LeftDpad_Left" param="776">
+          <key>Left</key>
+        </command>
+        <command commandId="LeftDpad_Right" param="777">
+          <key>Right</key>
+        </command>
+        <command commandId="LeftDpad_Up" param="778">
+          <key>Up</key>
+        </command>
+        <command commandId="LeftDpad_Down" param="779">
+          <key>Down</key>
+        </command>
+      </action>
+    </context>
+  </application>
+</keymapping>
