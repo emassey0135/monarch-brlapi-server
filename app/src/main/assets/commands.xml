@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keymapping>
   <application package="dev.emassey0135.monarchBrlapiServer">
-    <context viewIdResourceName="dev.emassey0135.monarchBrlapiServer:id/mainView">
+    <context viewIdResourceName="SelfBraillingWidget">
       <action name="substitute">
         <command commandId="Dots1" param="257">
           <key>Dots1</key>

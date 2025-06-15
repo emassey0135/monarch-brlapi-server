@@ -31,19 +31,19 @@ class BrailleDisplayService(val context: Context) {
     return brailleDisplayInterface==null
   }
   fun getDisplayWidth(): Int? {
-    return brailleDisplayInterface?.getDisplayWidth()
+    return brailleDisplayInterface!!.getDisplayWidth()
   }
   fun getDisplayHeight(): Int? {
-    return brailleDisplayInterface?.getDisplayHeight()
+    return brailleDisplayInterface!!.getDisplayHeight()
   }
   @Serializable
   private data class DotMatrix(val a: List<List<Byte>>, val b: Int, val c: Int) {
     constructor(dots: List<List<Byte>>): this(dots, dots.first().count(), dots.count())
   }
   fun display(dots: List<List<Byte>>) {
-    brailleDisplayInterface?.display(Json.encodeToString(DotMatrix(dots)))
+    brailleDisplayInterface!!.display(Json.encodeToString(DotMatrix(dots)))
   }
   fun speak(text: String) {
-    brailleDisplayInterface?.speak(text)
+    brailleDisplayInterface!!.speak(text)
   }
 }
