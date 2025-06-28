@@ -4,10 +4,12 @@ plugins {
   kotlin("kapt")
   kotlin("plugin.compose") version "2.1.21"
   kotlin("plugin.serialization") version "2.1.21"
+  id("org.mozilla.rust-android-gradle.rust-android")
 }
 android {
   compileSdk = 36
   namespace = "dev.emassey0135.monarchBrlapiServer"
+  ndkVersion = "29.0.13599879"
   buildFeatures {
     aidl = true
     compose = true
@@ -35,6 +37,12 @@ android {
     jvmTarget = "21"
   }
 }
+cargo {
+  module = "../rust"
+  libname = "monarch_brlapi_server"
+  profile = "release"
+  targets = listOf("arm64")
+}
 dependencies {
   implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
   implementation(kotlin("stdlib"))
@@ -43,4 +51,12 @@ dependencies {
   implementation(composeBom)
   implementation("androidx.compose.material3:material3")
   implementation("androidx.activity:activity-compose:1.10.1")
+}
+afterEvaluate {
+  tasks.named("javaPreCompileDebug") {
+    dependsOn("cargoBuild")
+  }
+  tasks.named("javaPreCompileRelease") {
+    dependsOn("cargoBuild")
+  }
 }
