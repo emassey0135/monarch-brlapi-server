@@ -9,6 +9,10 @@ import android.view.Window
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
 import dev.emassey0135.monarchBrlapiServer.brailleDisplayService.BrailleDisplayService
+import java.io.BufferedInputStream
+import java.io.File
+import java.io.FileOutputStream
+import java.util.zip.ZipInputStream
 
 const val doubleTapActionId = 0x69420321
 class SelfBraillingWidget(context: Context, val service: BrailleDisplayService): View(context) {
@@ -19,10 +23,11 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
   }
   override fun onAttachedToWindow() {
     super.onAttachedToWindow()
-    val server = BrlapiServer { matrix ->
+    val tablesPath = File(context.cacheDir, "tables").absolutePath
+    val server = BrlapiServer(tablesPath, { matrix ->
       if (service.isReady())
         service.display(matrix)
-    }
+    })
     server.start(4101, null)
   }
   override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
@@ -40,6 +45,7 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
     return true
   }
   override fun onPopulateAccessibilityEvent(event: AccessibilityEvent?) {
+    super.onPopulateAccessibilityEvent(event)
     event?.text?.add("Braille View")
   }
   override fun performAccessibilityAction(action: Int, args: Bundle?): Boolean {
@@ -56,10 +62,45 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
 }
 class TestActivity: Activity() {
   var view: SelfBraillingWidget? = null
+  private fun extractTables() {
+    val outputDirectory = cacheDir
+    val tablesDirectory = File(outputDirectory, "tables")
+    if (tablesDirectory.exists()) {
+      if (tablesDirectory.isDirectory()) {
+        val files = tablesDirectory.listFiles()
+        if (files!=null) {
+          for (file in files) {
+            file.delete()
+          }
+        }
+      }
+      tablesDirectory.delete()
+    }
+    val assetInputStream = assets.open("tables.zip")
+    val zipInputStream = ZipInputStream(BufferedInputStream(assetInputStream))
+    var entry = zipInputStream.nextEntry
+    while (entry!=null) {
+      val file = File(outputDirectory, entry.name)
+      if (entry.isDirectory) {
+        file.mkdirs()
+      }
+      else {
+        file.parentFile?.mkdirs()
+        val outputStream = FileOutputStream(file)
+        zipInputStream.copyTo(outputStream)
+        outputStream.close()
+      }
+      zipInputStream.closeEntry()
+      entry = zipInputStream.nextEntry
+    }
+    zipInputStream.close()
+    assetInputStream.close()
+  }
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    requestWindowFeature(Window.FEATURE_NO_TITLE);
+    requestWindowFeature(Window.FEATURE_NO_TITLE)
     val service = BrailleDisplayService(getApplication())
+    extractTables()
     view = SelfBraillingWidget(this, service)
     setContentView(view)
     view?.requestFocus()

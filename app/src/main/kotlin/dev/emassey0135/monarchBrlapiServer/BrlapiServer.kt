@@ -1,6 +1,11 @@
 package dev.emassey0135.monarchBrlapiServer
 
-class BrlapiServer(val matrixCallback: (Array<ByteArray>) -> Unit) {
+import android.system.Os
+
+class BrlapiServer(tablesPath: String, val matrixCallback: (Array<ByteArray>) -> Unit) {
+  init {
+    Os.setenv("LOUIS_TABLEPATH", tablesPath, true)
+  }
   external fun start(port: Short, authKey: String?)
   fun displayMatrix(matrix: Array<ByteArray>) {
     matrixCallback(matrix)
