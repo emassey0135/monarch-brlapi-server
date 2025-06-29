@@ -300,7 +300,7 @@ checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 [[package]]
 name = "louis"
 version = "0.6.2"
-source = "git+https://github.com/emassey0135/liblouis-rust#1140b34c72a231ae7a9ff2e33cea0b3e50c291ef"
+source = "git+https://github.com/emassey0135/liblouis-rust#556308c740ed1769f8277a24f5981c5a4d9deb7c"
 dependencies = [
  "log",
  "louis-sys",
@@ -311,7 +311,7 @@ dependencies = [
 [[package]]
 name = "louis-sys"
 version = "0.6.1"
-source = "git+https://github.com/emassey0135/liblouis-rust#1140b34c72a231ae7a9ff2e33cea0b3e50c291ef"
+source = "git+https://github.com/emassey0135/liblouis-rust#556308c740ed1769f8277a24f5981c5a4d9deb7c"
 dependencies = [
  "autotools",
  "bindgen",
