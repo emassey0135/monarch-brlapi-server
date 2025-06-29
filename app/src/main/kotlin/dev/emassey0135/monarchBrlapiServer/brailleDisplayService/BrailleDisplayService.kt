@@ -28,7 +28,7 @@ class BrailleDisplayService(val context: Context) {
       Context.BIND_AUTO_CREATE)
   }
   fun isReady(): Boolean {
-    return brailleDisplayInterface==null
+    return brailleDisplayInterface!=null
   }
   fun getDisplayWidth(): Int? {
     return brailleDisplayInterface!!.getDisplayWidth()
@@ -37,10 +37,10 @@ class BrailleDisplayService(val context: Context) {
     return brailleDisplayInterface!!.getDisplayHeight()
   }
   @Serializable
-  private data class DotMatrix(val a: List<List<Byte>>, val b: Int, val c: Int) {
-    constructor(dots: List<List<Byte>>): this(dots, dots.first().count(), dots.count())
+  private data class DotMatrix(val a: Array<ByteArray>, val b: Int, val c: Int) {
+    constructor(dots: Array<ByteArray>): this(dots, dots.first().count(), dots.count())
   }
-  fun display(dots: List<List<Byte>>) {
+  fun display(dots: Array<ByteArray>) {
     brailleDisplayInterface!!.display(Json.encodeToString(DotMatrix(dots)))
   }
   fun speak(text: String) {

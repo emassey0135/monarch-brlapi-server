@@ -12,11 +12,18 @@ import dev.emassey0135.monarchBrlapiServer.brailleDisplayService.BrailleDisplayS
 
 const val doubleTapActionId = 0x69420321
 class SelfBraillingWidget(context: Context, val service: BrailleDisplayService): View(context) {
-  var firstPress = true
   init {
     importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_YES
     isFocusable = true
     isClickable = true
+  }
+  override fun onAttachedToWindow() {
+    super.onAttachedToWindow()
+    val server = BrlapiServer { matrix ->
+      if (service.isReady())
+        service.display(matrix)
+    }
+    server.start(4101, null)
   }
   override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
     super.onInitializeAccessibilityNodeInfo(info)
@@ -29,25 +36,7 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
   override fun onKeyDown(keycode: Int, event: KeyEvent): Boolean {
     if (keycode<=256)
       return false
-    if (firstPress) {
-      val width = service.getDisplayWidth()!!
-      val height = service.getDisplayHeight()!!
-      service.speak("Display: ${width} by ${height}.")
-      val rows: MutableList<List<Byte>> = mutableListOf()
-      (1..height).forEach {
-        val row: MutableList<Byte> = mutableListOf()
-        val y = it
-        (1..width).forEach {
-          row.add(if (it % 2 == 0 && y % 2 == 0) 1 else 0)
-        }
-        rows.add(row)
-      }
-      service.display(rows)
-      firstPress = false
-    }
-    else {
-      service.speak("Key pressed: $keycode")
-    }
+    service.speak("Key pressed: $keycode")
     return true
   }
   override fun onPopulateAccessibilityEvent(event: AccessibilityEvent?) {

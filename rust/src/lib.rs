@@ -78,15 +78,17 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sta
     let (braille_tx, mut braille_rx) = mpsc::channel(32);
     let (keycode_tx, keycode_rx) = mpsc::channel(32);
     let backend = ServerBackend { columns: 32, lines: 10, braille_tx, keycode_rx };
-    start(port as u16, auth_key, backend).await;
+    tokio::spawn(async move {
+      start(port as u16, auth_key, backend).await;
+    });
     while let Some(braille_matrix) = braille_rx.recv().await {
       let dot_matrix = braille_matrix_to_dot_matrix(&braille_matrix);
       let mut env = java_vm.get_env().unwrap();
-      let class = env.find_class("[B").unwrap();
+      let byte_array_class = env.find_class("[B").unwrap();
       let array = env
         .new_object_array(
           40,
-          &class,
+          &byte_array_class,
           JObject::null(),
         )
         .unwrap();

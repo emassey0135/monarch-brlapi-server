@@ -16,4 +16,5 @@
         <activity android:exported="false" android:name=".TestActivity"/>
         <provider android:authorities="dev.emassey0135.monarchBrlapiServer.XmlResource" android:exported="true" android:grantUriPermissions="true" android:name="dev.emassey0135.monarchBrlapiServer.XmlResource"/>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
