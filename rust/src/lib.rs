@@ -77,7 +77,7 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sta
     java_vm.attach_current_thread_permanently().unwrap();
     let (braille_tx, mut braille_rx) = mpsc::channel(32);
     let (keycode_tx, keycode_rx) = mpsc::channel(32);
-    let backend = ServerBackend { columns: 32, lines: 10, braille_tx, keycode_rx };
+    let backend = ServerBackend { driver_name: "Monarch".to_owned(), model_id: "monarch".to_owned(), columns: 32, lines: 10, braille_tx, keycode_rx };
     tokio::spawn(async move {
       start(port as u16, auth_key, backend).await;
     });
