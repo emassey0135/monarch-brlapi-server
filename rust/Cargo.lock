@@ -126,7 +126,7 @@ checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
 [[package]]
 name = "brlapi-server"
 version = "0.1.0"
-source = "git+https://github.com/emassey0135/brlapi-rs#425252af89dc8a35cd23f2cfeda7b66821e7c707"
+source = "git+https://github.com/emassey0135/brlapi-rs#bd2ed81e8d643a42ee23a518b7c365bba40dfaae"
 dependencies = [
  "binrw",
  "brlapi-types",
@@ -139,7 +139,7 @@ dependencies = [
 [[package]]
 name = "brlapi-types"
 version = "0.1.0"
-source = "git+https://github.com/emassey0135/brlapi-rs#425252af89dc8a35cd23f2cfeda7b66821e7c707"
+source = "git+https://github.com/emassey0135/brlapi-rs#bd2ed81e8d643a42ee23a518b7c365bba40dfaae"
 dependencies = [
  "binrw",
  "bitfield-struct",
@@ -161,9 +161,9 @@ checksum = "d71b6127be86fdcfddb610f7182ac57211d4b18a3e9c82eb2d17662f2227ad6a"
 
 [[package]]
 name = "cc"
-version = "1.2.27"
+version = "1.2.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d487aa071b5f64da6f19a3e848e3578944b726ee5a4854b82172f02aa876bfdc"
+checksum = "5c1599538de2394445747c8cf7935946e3cc27e9625f889d979bfb2aaf569362"
 dependencies = [
  "shlex",
 ]
@@ -236,6 +236,17 @@ checksum = "93a1156e71e53be4dff168b017c6483f579968c578577184eebb33d164c0f02c"
 dependencies = [
  "cfg-if",
  "vcpkg",
+]
+
+[[package]]
+name = "io-uring"
+version = "0.7.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b86e202f00093dcba4275d4636b93ef9dd75d025ae560d2521b45ea28ab49013"
+dependencies = [
+ "bitflags",
+ "cfg-if",
+ "libc",
 ]
 
 [[package]]
@@ -616,6 +627,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "slab"
+version = "0.4.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "04dc19736151f35336d325007ac991178d504a119863a2fcb3758cdb5e52c50d"
+
+[[package]]
 name = "smallvec"
 version = "1.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -664,17 +681,19 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.45.1"
+version = "1.46.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "75ef51a33ef1da925cea3e4eb122833cb377c61439ca401b770f54902b806779"
+checksum = "0cc3a2344dafbe23a245241fe8b09735b521110d30fcefbbd5feb1797ca35d17"
 dependencies = [
  "backtrace",
  "bytes",
+ "io-uring",
  "libc",
  "mio",
  "parking_lot",
  "pin-project-lite",
  "signal-hook-registry",
+ "slab",
  "socket2",
  "tokio-macros",
  "windows-sys 0.52.0",
