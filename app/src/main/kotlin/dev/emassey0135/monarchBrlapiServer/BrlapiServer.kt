@@ -13,6 +13,7 @@ class BrlapiServer(tablesPath: String, val matrixCallback: (Array<ByteArray>) ->
     matrixCallback(matrix)
   }
   external fun sendKeys(keys: Int)
+  external fun routeCursor(x: Byte, y: Byte)
   init {
     System.loadLibrary("monarch_brlapi_server")
   }

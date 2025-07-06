@@ -53,7 +53,7 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
     if (action==doubleTapActionId) {
       val x = args?.getInt("X_POINT")
       val y = args?.getInt("Y_POINT")
-      service.speak("Double tap at ($x, $y)")
+      server?.routeCursor(x!!.toByte(), y!!.toByte())
       return true
     }
     else {

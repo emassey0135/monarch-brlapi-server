@@ -3,7 +3,7 @@ use brlapi_server::{LouisRequest, ServerBackend, start};
 use brlapi_types::keycode::{BrailleCommand, Keycode, KeycodeFlags};
 use jni::JNIEnv;
 use jni::objects::{JObject, JString, JValue};
-use jni::sys::{jint, jshort};
+use jni::sys::{jbyte, jint, jshort};
 use ndarray::Array2;
 use tokio::runtime;
 use tokio::sync::{mpsc, oneshot};
@@ -127,7 +127,7 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sen
 ) {
   let brlapi_server_object = env.new_global_ref(object).unwrap();
   let java_vm = env.get_java_vm().unwrap();
-  RUNTIME.with(|runtime| runtime.spawn(async move {
+  RUNTIME.with(|runtime| runtime.block_on(async move {
     java_vm.attach_current_thread_permanently().unwrap();
     let keycode_tx = {
       let mut env = java_vm.get_env().unwrap();
@@ -169,5 +169,32 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sen
     keycode_tx.send(keycode).await.unwrap();
     std::mem::forget(keycode_tx);
     std::mem::forget(louis_tx);
+  }));
+}
+#[unsafe(no_mangle)]
+pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_routeCursor<'local>(
+  env: JNIEnv<'local>,
+  object: JObject<'local>,
+  x: jbyte,
+  y: jbyte,
+) {
+  let brlapi_server_object = env.new_global_ref(object).unwrap();
+  let java_vm = env.get_java_vm().unwrap();
+  RUNTIME.with(|runtime| runtime.block_on(async move {
+    java_vm.attach_current_thread_permanently().unwrap();
+    let keycode_tx = {
+      let mut env = java_vm.get_env().unwrap();
+      let keycode_tx = env.get_field(&brlapi_server_object, "keycodeTx", "J").unwrap().j().unwrap();
+      unsafe { Box::from_raw(std::ptr::null_mut::<mpsc::Sender<Keycode>>().with_addr(keycode_tx as usize)) }
+    };
+    let x = x as u8;
+    let y = y as u8;
+    let x = x/3;
+    let y = y/4;
+    let keycode = Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::RouteCursorToCharacter { column: x as u16 }) };
+    keycode_tx.send(keycode).await.unwrap();
+    let keycode = Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::RouteCursorToLine { row: y as u16 }) };
+    keycode_tx.send(keycode).await.unwrap();
+    std::mem::forget(keycode_tx);
   }));
 }
