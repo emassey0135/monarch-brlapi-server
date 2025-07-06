@@ -1,12 +1,12 @@
 use bitflags::bitflags;
-use brlapi_server::{ServerBackend, start};
+use brlapi_server::{LouisRequest, ServerBackend, start};
 use brlapi_types::keycode::{BrailleCommand, Keycode, KeycodeFlags};
 use jni::JNIEnv;
 use jni::objects::{JObject, JString, JValue};
 use jni::sys::{jint, jshort};
 use ndarray::Array2;
 use tokio::runtime;
-use tokio::sync::mpsc;
+use tokio::sync::{mpsc, oneshot};
 use xkeysym::Keysym;
 
 bitflags! {
@@ -79,12 +79,15 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sta
     java_vm.attach_current_thread_permanently().unwrap();
     let (braille_tx, mut braille_rx) = mpsc::channel(32);
     let (keycode_tx, keycode_rx) = mpsc::channel(32);
+    let (louis_tx, louis_rx) = mpsc::channel(32);
     {
       let mut env = java_vm.get_env().unwrap();
       let keycode_tx = Box::into_raw(Box::new(keycode_tx)).addr();
       env.set_field(&brlapi_server_object, "keycodeTx", "J", JValue::Long(keycode_tx as i64)).unwrap();
+      let louis_tx = Box::into_raw(Box::new(louis_tx)).addr();
+      env.set_field(&brlapi_server_object, "louisTx", "J", JValue::Long(louis_tx as i64)).unwrap();
     }
-    let backend = ServerBackend { driver_name: "Monarch".to_owned(), model_id: "monarch".to_owned(), columns: 32, lines: 10, braille_tx, keycode_rx };
+    let backend = ServerBackend { driver_name: "Monarch".to_owned(), model_id: "monarch".to_owned(), columns: 32, lines: 10, braille_tx, keycode_rx, louis_rx };
     tokio::spawn(async move {
       start(port as u16, auth_key, backend).await;
     });
@@ -131,7 +134,15 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sen
       let keycode_tx = env.get_field(&brlapi_server_object, "keycodeTx", "J").unwrap().j().unwrap();
       unsafe { Box::from_raw(std::ptr::null_mut::<mpsc::Sender<Keycode>>().with_addr(keycode_tx as usize)) }
     };
+    let louis_tx = {
+      let mut env = java_vm.get_env().unwrap();
+      let louis_tx = env.get_field(&brlapi_server_object, "louisTx", "J").unwrap().j().unwrap();
+      unsafe { Box::from_raw(std::ptr::null_mut::<mpsc::Sender<LouisRequest>>().with_addr(louis_tx as usize)) }
+    };
     let keycode = match keys {
+      64 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::BackSpace), braille_command: None },
+      128 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Return), braille_command: None },
+      256 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::space), braille_command: None },
       512 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::SeveralLinesUp) },
       513 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::SeveralLinesDown) },
       514 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::NextFullWindow) },
@@ -144,9 +155,19 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sen
       521 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::End), braille_command: None },
       522 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Page_Up), braille_command: None },
       523 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Page_Down), braille_command: None },
+      dots if dots <= 127 => {
+        let dots = dots as u32;
+        let braille_character: String = char::from_u32(dots+10240).unwrap().into();
+        let (result_tx, result_rx) = oneshot::channel();
+        louis_tx.send(LouisRequest { tables: "unicode.dis,en-us-comp8.ctb".to_owned(), text: braille_character, backwards: true, result_tx }).await.unwrap();
+        let character = result_rx.await.unwrap();
+        let character = character.chars().next().unwrap();
+        Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::from_char(character)), braille_command: None }
+      },
       _ => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::space), braille_command: None },
     };
     keycode_tx.send(keycode).await.unwrap();
     std::mem::forget(keycode_tx);
+    std::mem::forget(louis_tx);
   }));
 }

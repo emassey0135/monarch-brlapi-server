@@ -4,6 +4,7 @@ import android.system.Os
 
 class BrlapiServer(tablesPath: String, val matrixCallback: (Array<ByteArray>) -> Unit) {
   var keycodeTx: Long = 0
+  var louisTx: Long = 0
   init {
     Os.setenv("LOUIS_TABLEPATH", tablesPath, true)
   }
