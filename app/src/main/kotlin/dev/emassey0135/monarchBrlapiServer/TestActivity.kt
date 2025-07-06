@@ -16,6 +16,7 @@ import java.util.zip.ZipInputStream
 
 const val doubleTapActionId = 0x69420321
 class SelfBraillingWidget(context: Context, val service: BrailleDisplayService): View(context) {
+  var server: BrlapiServer? = null
   init {
     importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_YES
     isFocusable = true
@@ -24,11 +25,11 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
   override fun onAttachedToWindow() {
     super.onAttachedToWindow()
     val tablesPath = File(context.cacheDir, "tables").absolutePath
-    val server = BrlapiServer(tablesPath, { matrix ->
+    server = BrlapiServer(tablesPath, { matrix ->
       if (service.isReady())
         service.display(matrix)
     })
-    server.start(4101, null)
+    server?.start(4101, null)
   }
   override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
     super.onInitializeAccessibilityNodeInfo(info)
@@ -41,7 +42,7 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
   override fun onKeyDown(keycode: Int, event: KeyEvent): Boolean {
     if (keycode<=256)
       return false
-    service.speak("Key pressed: $keycode")
+    server?.sendKeys(keycode)
     return true
   }
   override fun onPopulateAccessibilityEvent(event: AccessibilityEvent?) {

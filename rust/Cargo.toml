@@ -17,6 +17,7 @@ brlapi-types = { git = "https://github.com/emassey0135/brlapi-rs", version = "0.
 jni = "0.21.1"
 ndarray = "0.16.1"
 tokio = { version = "1.46.1", features = ["full"] }
+xkeysym = "0.2.1"
 
 [build-dependencies]
 autotools = "0.2.7"

@@ -1,11 +1,13 @@
 use bitflags::bitflags;
 use brlapi_server::{ServerBackend, start};
+use brlapi_types::keycode::{Keycode, KeycodeFlags};
 use jni::JNIEnv;
 use jni::objects::{JObject, JString, JValue};
-use jni::sys::jshort;
+use jni::sys::{jint, jshort};
 use ndarray::Array2;
 use tokio::runtime;
 use tokio::sync::mpsc;
+use xkeysym::Keysym;
 
 bitflags! {
   #[derive(Debug, PartialEq, Eq, Clone)]
@@ -77,6 +79,11 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sta
     java_vm.attach_current_thread_permanently().unwrap();
     let (braille_tx, mut braille_rx) = mpsc::channel(32);
     let (keycode_tx, keycode_rx) = mpsc::channel(32);
+    {
+      let mut env = java_vm.get_env().unwrap();
+      let keycode_tx = Box::into_raw(Box::new(keycode_tx)).addr();
+      env.set_field(&brlapi_server_object, "keycodeTx", "J", JValue::Long(keycode_tx as i64)).unwrap();
+    }
     let backend = ServerBackend { driver_name: "Monarch".to_owned(), model_id: "monarch".to_owned(), columns: 32, lines: 10, braille_tx, keycode_rx };
     tokio::spawn(async move {
       start(port as u16, auth_key, backend).await;
@@ -107,5 +114,24 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sta
       };
       env.call_method(&brlapi_server_object, "displayMatrix", "([[B)V", &[JValue::Object(&array)]).unwrap();
     };
+  }));
+}
+#[unsafe(no_mangle)]
+pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sendKeys<'local>(
+  env: JNIEnv<'local>,
+  object: JObject<'local>,
+  keys: jint,
+) {
+  let brlapi_server_object = env.new_global_ref(object).unwrap();
+  let java_vm = env.get_java_vm().unwrap();
+  RUNTIME.with(|runtime| runtime.spawn(async move {
+    java_vm.attach_current_thread_permanently().unwrap();
+    let keycode_tx = {
+      let mut env = java_vm.get_env().unwrap();
+      let keycode_tx = env.get_field(&brlapi_server_object, "keycodeTx", "J").unwrap().j().unwrap();
+      unsafe { Box::from_raw(std::ptr::null_mut::<mpsc::Sender<Keycode>>().with_addr(keycode_tx as usize)) }
+    };
+    keycode_tx.send(Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::space), braille_command: None }).await.unwrap();
+    std::mem::forget(keycode_tx);
   }));
 }

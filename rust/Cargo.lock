@@ -126,7 +126,7 @@ checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
 [[package]]
 name = "brlapi-server"
 version = "0.1.0"
-source = "git+https://github.com/emassey0135/brlapi-rs#bd2ed81e8d643a42ee23a518b7c365bba40dfaae"
+source = "git+https://github.com/emassey0135/brlapi-rs#b6d3c8dcafbcb5f185d61a5e3c8c1a71612b3a51"
 dependencies = [
  "binrw",
  "brlapi-types",
@@ -139,7 +139,7 @@ dependencies = [
 [[package]]
 name = "brlapi-types"
 version = "0.1.0"
-source = "git+https://github.com/emassey0135/brlapi-rs#bd2ed81e8d643a42ee23a518b7c365bba40dfaae"
+source = "git+https://github.com/emassey0135/brlapi-rs#b6d3c8dcafbcb5f185d61a5e3c8c1a71612b3a51"
 dependencies = [
  "binrw",
  "bitfield-struct",
@@ -387,6 +387,7 @@ dependencies = [
  "jni",
  "ndarray",
  "tokio",
+ "xkeysym",
 ]
 
 [[package]]
