@@ -42,7 +42,7 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
   override fun onKeyDown(keycode: Int, event: KeyEvent): Boolean {
     if (keycode<=256)
       return false
-    server?.sendKeys(keycode)
+    server?.sendKeys(keycode-256)
     return true
   }
   override fun onPopulateAccessibilityEvent(event: AccessibilityEvent?) {

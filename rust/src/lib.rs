@@ -1,6 +1,6 @@
 use bitflags::bitflags;
 use brlapi_server::{ServerBackend, start};
-use brlapi_types::keycode::{Keycode, KeycodeFlags};
+use brlapi_types::keycode::{BrailleCommand, Keycode, KeycodeFlags};
 use jni::JNIEnv;
 use jni::objects::{JObject, JString, JValue};
 use jni::sys::{jint, jshort};
@@ -131,7 +131,22 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_sen
       let keycode_tx = env.get_field(&brlapi_server_object, "keycodeTx", "J").unwrap().j().unwrap();
       unsafe { Box::from_raw(std::ptr::null_mut::<mpsc::Sender<Keycode>>().with_addr(keycode_tx as usize)) }
     };
-    keycode_tx.send(Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::space), braille_command: None }).await.unwrap();
+    let keycode = match keys {
+      512 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::SeveralLinesUp) },
+      513 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::SeveralLinesDown) },
+      514 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::NextFullWindow) },
+      515 => Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::PreviousFullWindow) },
+      516 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Left), braille_command: None },
+      517 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Right), braille_command: None },
+      518 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Up), braille_command: None },
+      519 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Down), braille_command: None },
+      520 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Home), braille_command: None },
+      521 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::End), braille_command: None },
+      522 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Page_Up), braille_command: None },
+      523 => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::Page_Down), braille_command: None },
+      _ => Keycode { flags: KeycodeFlags::empty(), keysym: Some(Keysym::space), braille_command: None },
+    };
+    keycode_tx.send(keycode).await.unwrap();
     std::mem::forget(keycode_tx);
   }));
 }
