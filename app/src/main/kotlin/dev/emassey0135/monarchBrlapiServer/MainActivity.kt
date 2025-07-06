@@ -13,11 +13,11 @@ class MainActivity: ComponentActivity() {
     setContent {
       Button(
         onClick = {
-          val intent = Intent(this, TestActivity::class.java)
+          val intent = Intent(this, ServerDisplayActivity::class.java)
           startActivity(intent)
         }
       ) {
-        Text("Run Test")
+        Text("Start server")
       }
     }
   }

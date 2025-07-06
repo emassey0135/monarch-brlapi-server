@@ -61,7 +61,7 @@ class SelfBraillingWidget(context: Context, val service: BrailleDisplayService):
     }
   }
 }
-class TestActivity: Activity() {
+class ServerDisplayActivity: Activity() {
   var view: SelfBraillingWidget? = null
   private fun extractTables() {
     val outputDirectory = cacheDir
