@@ -191,9 +191,8 @@ pub extern "system" fn Java_dev_emassey0135_monarchBrlapiServer_BrlapiServer_rou
     let y = y as u8;
     let x = x/3;
     let y = y/4;
-    let keycode = Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::RouteCursorToCharacter { column: x as u16 }) };
-    keycode_tx.send(keycode).await.unwrap();
-    let keycode = Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::RouteCursorToLine { row: y as u16 }) };
+    let cell: u16 = (y as u16)*32+(x as u16);
+    let keycode = Keycode { flags: KeycodeFlags::empty(), keysym: None, braille_command: Some(BrailleCommand::RouteCursorToCharacter { column: cell as u16 }) };
     keycode_tx.send(keycode).await.unwrap();
     std::mem::forget(keycode_tx);
   }));
